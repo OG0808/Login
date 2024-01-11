@@ -6,6 +6,7 @@ import Register from "./pages/Register";
 import { AuthProvider } from "./context/AuthContext";
 import ProtectecRoute from "./pages/ProtectecRoute";
 import ResetPassword from "./pages/ResetPassword";
+import NoFound from "./pages/NoFound";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/resetpassword" element={<ResetPassword/>}/>
+          <Route path="*" element={<NoFound/>}/>
         </Routes>
       </AuthProvider>
     </div>
